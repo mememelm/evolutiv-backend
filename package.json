@@ -17,6 +17,7 @@
     "morgan": "~1.9.1",
     "mysql2": "^2.3.3",
     "node-fetch-npm": "^2.0.4",
+    "nodemon": "^2.0.15",
     "sequelize": "^6.14.1",
     "url": "^0.11.0"
   }
