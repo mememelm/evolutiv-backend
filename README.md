@@ -20,7 +20,7 @@
 - L'api key de IQAIR a une limite de 250 requête par jour. Il vous faudre regénérer une nouvelle clé et le copier dans .env *IQAIR_KEY*
 
 # evolutiv-backend with Docker
-- Entrer dans le repertoire cloner et exécuter dans votre terminal : *docker-compose up -d*
+- Entrer dans le répertoire cloné et exécuter dans votre terminal : *docker-compose up -d*
 
 # Documentation api
 - https://documenter.getpostman.com/view/10400700/UVeAu8yv
