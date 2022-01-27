@@ -1,6 +1,6 @@
 # evolutiv-backend
 
-## Premier démarage
+## Premier démarrage
 - Entrer dans le fichier et faire *npm install* (si npm n'est pas reconnu, installer nodejs sur votre pc => lien: https://nodejs.org/en/download/)
 - Modifier le fichier .env.exemple en .env
 - Verifier votre serveur de base de données (on utilisera la dialecte 'MySql')
