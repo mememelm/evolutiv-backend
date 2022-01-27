@@ -10,7 +10,7 @@ const getAirByPoint = async (req, res) => {
         key: process.env.IQAIR_KEY
     }
     if (!lat || !lon || isNaN(lat) || isNaN(lon)) {
-        return res.status(203).send('Veuillez vérifier les paramètres lat et lon')
+        return res.status(203).send('Vérifier les paramètres lat et lon !')
     } else {
         const url = new URL(process.env.IQAIR_ENDPOINT)
         url.search = new URLSearchParams(queryParameters).toString()
@@ -23,9 +23,8 @@ const getAirByPoint = async (req, res) => {
 }
 
 const getAirParis = async () => {
-    const latitude = 48.856613
-    const longitude = 2.352222
-    const url = process.env.IQAIR_ENDPOINT + '?key=' + process.env.IQAIR_KEY + '&lat=' + latitude + '&lon=' + longitude
+    const coordinates = { lat: 48.856613, lon: 2.352222 }
+    const url = process.env.IQAIR_ENDPOINT + '?key=' + process.env.IQAIR_KEY + '&lat=' + coordinates.lat + '&lon=' + coordinates.lon
     const resultFetch = await fetch(url).catch(err => console.warn(err))
     const result = await resultFetch.json()
     const pollution = result.data.current.pollution
@@ -59,11 +58,11 @@ const getHeaviestPollution = (req, res) => {
             if (error) throw error
             res.status(200).send(result)
         })
-    }) 
+    })
 }
 
-module.exports = { 
-    getAirByPoint, 
+module.exports = {
+    getAirByPoint,
     getAirParis,
     getHeaviestPollution
 }

@@ -1,4 +1,4 @@
-# evolutiv-backend
+# evolutiv-backend basic lunch
 
 ## Premier démarrage
 - Entrer dans le fichier et faire *npm install* (si npm n'est pas reconnu, installer nodejs sur votre pc => lien: https://nodejs.org/en/download/)
@@ -19,5 +19,8 @@
 - Ce serveur lancera un cronJob spécifique toutes les minutes (example h: 1h23min00s => 1h24min00s)
 - L'api key de IQAIR a une limite de 250 requête par jour. Il vous faudre regénérer une nouvelle clé et le copier dans .env *IQAIR_KEY*
 
-## Documentation api
+# evolutiv-backend with Docker
+- Entrer dans le repertoire cloner et exécuter dans votre terminal : *docker-compose up -d*
+
+# Documentation api
 - https://documenter.getpostman.com/view/10400700/UVeAu8yv
