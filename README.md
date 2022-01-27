@@ -22,5 +22,9 @@
 # evolutiv-backend with Docker
 - Entrer dans le répertoire cloné et exécuter dans votre terminal : *docker-compose up -d*
 
+# Unit test
+- Executer *npm test* pour effectuer les tests unitaires (route)
+=> Une erreur 500 est visible causée par le package 'cron' // debug dans le prochain release :) 
+
 # Documentation api
 - https://documenter.getpostman.com/view/10400700/UVeAu8yv
