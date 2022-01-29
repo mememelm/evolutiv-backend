@@ -2,6 +2,7 @@ version: "3.6"
 services:
   web:
     build: .
+    container_name: web
     environment:
       - DB_DIALECT=mysql
       - DB_HOST=mysql
@@ -9,6 +10,7 @@ services:
       - DB_NAME=iqair
       - DB_USERNAME=root
       - DB_PASSWORD=rootR001
+    entrypoint: "npm start &"
     ports:
       - "3000:3000"
     depends_on:
@@ -16,6 +18,9 @@ services:
 
   mysql:
     image: mysql:5.7
+    container_name: mysql
     environment:
       - MYSQL_ROOT_PASSWORD=rootR001
       - MYSQL_DATABASE=iqair
+    volumes:
+      - ./data:/var/lib/mysql/data

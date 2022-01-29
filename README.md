@@ -21,7 +21,7 @@
 
 # evolutiv-backend with Docker
 - Entrer dans le répertoire cloné et exécuter dans votre terminal : *docker-compose up -d*
-
+- Si la base de données existe déjà faire un back_up de la base et faire *docker exec -i mysql mysql  -uroot -prootR001 iqair < backup_db.sql* pour restaurer le back_up puis poursuivre avec *docker-compose up -d*
 # Unit test
 - Executer *npm test* pour effectuer les tests unitaires (route)
 => Une erreur 500 est visible causée par le package 'cron' // debug dans le prochain release :) 
